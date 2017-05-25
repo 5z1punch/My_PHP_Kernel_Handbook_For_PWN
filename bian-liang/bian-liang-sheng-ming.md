@@ -19,7 +19,7 @@ ZEND_API int _zend_hash_add_or_update(HashTable *ht, const char *arKey, uint nKe
 h = zend_inline_hash_func(arKey, nKeyLength);
 nIndex = h & ht->nTableMask;
 ```
-zend_inline_hash_func 定义于 zend_hash.h ，我使用python重写了该算法：
+zend\_inline\_hash\_func 定义于 zend\_hash.h ，我使用python重写了该算法：
 php_hashtable.py
 ```
 def zend_inline_hash_func(arKey):
